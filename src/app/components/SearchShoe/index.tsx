@@ -27,7 +27,7 @@ const SearchShoe = ({
     }
   }, 500);
 
-  const handleOnChangeSearch = async (e) => {
+  const handleOnChangeSearch = async (e: any) => {
     let value = e.target.value;
 
     handleRenderListShoe(value);

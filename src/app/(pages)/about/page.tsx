@@ -1,8 +1,8 @@
 "use client";
 
 import { getListShoeAPI } from "@/app/service/shoeApi";
+import { IShoeType } from "@/app/types/shoe";
 import React, { useEffect, useState } from "react";
-import { IShoeType } from "../../types/shoe";
 
 const About = () => {
   const [listShoe, setListShoe] = useState<IShoeType[]>();
@@ -11,7 +11,7 @@ const About = () => {
     // anonymous function cách viết : (trong này viết hàm muốn chạy liền không cần lệnh gọi hàm) ()
 
     (async () => {
-      const listShoe = getListShoeAPI();
+      const listShoe = await getListShoeAPI();
       setListShoe(listShoe);
     })();
   }, []);

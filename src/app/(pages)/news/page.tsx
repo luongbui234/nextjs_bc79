@@ -1,7 +1,8 @@
 import React from "react";
-import { IShoeType } from "../about/page";
+// import { IShoeType } from "../about/page";
 import Link from "next/link";
 import { getListShoeAPI } from "@/app/service/shoeApi";
+import { IShoeType } from "@/app/types/shoe";
 
 const News = async () => {
   const dataListShoe: IShoeType[] = await getListShoeAPI();
