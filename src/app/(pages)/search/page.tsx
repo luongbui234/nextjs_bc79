@@ -1,6 +1,6 @@
 import SearchShoe from "@/app/components/SearchShoe";
 import { getListProductByKeyWord } from "@/app/service/shoeApi";
-import React, { useState } from "react";
+import React from "react";
 
 const SearchPage = async ({
   searchParams,

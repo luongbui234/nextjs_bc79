@@ -2,7 +2,7 @@
 
 import { getListProductByKeyWord } from "@/app/service/shoeApi";
 import { IShoeType } from "@/app/types/shoe";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import _ from "lodash";
 
@@ -27,8 +27,10 @@ const SearchShoe = ({
     }
   }, 500);
 
-  const handleOnChangeSearch = async (e: any) => {
-    let value = e.target.value;
+  const handleOnChangeSearch = async (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const value = e.target.value;
 
     handleRenderListShoe(value);
   };
